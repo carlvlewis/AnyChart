@@ -1222,7 +1222,7 @@ anychart.core.Chart.prototype.drawInternal = function() {
   if (!this.checkDrawingNeeded())
     return;
 
-  if (this.container() && anychart.compatibility.IS_PHANTOM_JS)
+  if (anychart.compatibility.IS_PHANTOM_JS && this.container() && this.container().getStage())
     this.container().getStage().getTooltipLayer();
 
   anychart.performance.start('Chart.draw()');
