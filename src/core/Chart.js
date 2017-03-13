@@ -6,6 +6,7 @@
 goog.provide('anychart.core.Chart');
 
 goog.require('acgraph');
+goog.require('anychart.compatibility');
 goog.require('anychart.core.VisualBaseWithBounds');
 goog.require('anychart.core.reporting');
 goog.require('anychart.core.ui.Background');
@@ -1220,6 +1221,9 @@ anychart.core.Chart.prototype.drawInternal = function() {
 
   if (!this.checkDrawingNeeded())
     return;
+
+  if (this.container() && anychart.compatibility.IS_PHANTOM_JS)
+    this.container().getStage().getTooltipLayer();
 
   anychart.performance.start('Chart.draw()');
   var startTime;
