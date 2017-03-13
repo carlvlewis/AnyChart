@@ -1110,8 +1110,6 @@ goog.provide('anychart.themes.defaultTheme');
         'allowMultiSeriesSelection': true
       },
       'tooltip': {
-        'allowLeaveScreen': true,
-        'allowLeaveChart': false,
         'displayMode': 'single',
         'positionMode': 'float',
         'title': {
@@ -4717,7 +4715,6 @@ goog.provide('anychart.themes.defaultTheme');
       },
       'tooltip': {
         'allowLeaveScreen': true,
-        'allowLeaveChart': false,
         'displayMode': 'union',
         'positionMode': 'float',
         'title': {
